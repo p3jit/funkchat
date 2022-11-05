@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>TEST</div>
+    <div className=''>TEST</div>
   );
 }
 
