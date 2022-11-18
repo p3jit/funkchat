@@ -12,6 +12,7 @@ function LeftNav() {
             <div className='bg-zinc-600'>
               <LeftNavProfile/>
               <LeftSearchBar/>
+              <hr className=" bg-gray-200 border-0 dark:bg-zinc-700 h-px mx-3 my-3"/>
               <LeftChatContainer/>
             </div>
         </div>

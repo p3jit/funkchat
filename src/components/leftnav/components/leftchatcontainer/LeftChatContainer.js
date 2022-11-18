@@ -1,17 +1,28 @@
-import React from 'react'
+import { doc, onSnapshot } from 'firebase/firestore';
+import React, { useContext, useEffect, useState } from 'react'
+import { AuthContext } from '../../../../context/AuthContext';
+import { db } from '../../../../firebase';
 import LeftSingleChat from './leftsinglechat/LeftSingleChat'
 
 function LeftChatContainer() {
+  const [chats,setChats] = useState([]);
+  const {currentUser} = useContext(AuthContext);
+
+  useEffect(()=>{
+    const unsub = onSnapshot(doc(db, "userChats", currentUser.uid), (doc) => {
+      setChats(doc.data());
+    });
+
+    return () => {
+      unsub();
+    }
+  },[currentUser.uid]);
   return (
     <div className='h-96 mx-5 mt-2 mb-6 gap-3 flex flex-col overflow-y-auto scrollbar-thumb-zinc-700 scrollbar-track-zinc-400 scrollbar-thin scroll'>
-        <LeftSingleChat name={"Kyle Simpsons"}/>
+        {/* <LeftSingleChat name={"Kyle Simpsons"}/>
         <LeftSingleChat name={"Jhonny Sins"}/>
-        <LeftSingleChat name={"Amir Khan"}/>
-        <LeftSingleChat name={"Salman Khan"}/>
-        <LeftSingleChat name={"Salman Khan"}/>
-        <LeftSingleChat name={"Salman Khan"}/>
-        <LeftSingleChat name={"Salman Khan"}/>
-        <LeftSingleChat name={"Salman Khan"}/>
+        <LeftSingleChat name={"Salman Khan"}/> */}
+        { Object.entries(chats)?.sort((a,b)=>{return a[1].date-b[1].date}).map((chat)=> <LeftSingleChat key={chat[0]} value = {chat[1].userInfo} lastMessage={chat[1].lastMessage.text}/>)}
     </div>
   )
 }
