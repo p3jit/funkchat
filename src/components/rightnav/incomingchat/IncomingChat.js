@@ -10,7 +10,7 @@ function IncomingChat({msg}) {
         <div className='flex flex-col gap-5'>
           <div className='p-4 bg-zinc-700 w-fit rounded-lg self-start'>{msg.text}</div>
           <div className=' flex justify-center hover:cursor-pointer'>
-            {msg.img && <img src={ msg.img } loading="lazy" alt="chat-img" className='w-52 h-40 object-cover p-2 bg-zinc-700'/>}
+            {msg.img && <img src={ msg.img } loading="lazy" alt="chat-img" className='max-w-[400px] max-h-[300px] object-cover p-2 bg-zinc-700'/>}
           </div>
         </div>
 
