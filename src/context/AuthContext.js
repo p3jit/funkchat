@@ -12,7 +12,7 @@ function AuthContextProvider({children}) {
             setCurrentUser(user);
         });
         return unsub();
-    },[]);
+    },[currentUser]);
 
     return (
         <AuthContext.Provider value={{currentUser,setCurrentUser}}>{children}</AuthContext.Provider>
