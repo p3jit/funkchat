@@ -75,11 +75,9 @@ function RightInputContainer() {
 
         <input className='outline-none rounded-md w-full text-black py-2 px-3 my-3 mx-4' onKeyUp={e=>{setText(e.target.value)}} ref={textRef}/>
         <div className='flex items-center gap-3 mr-5'>
-            {/* <button className=' text-2xl'><TfiClip/></button> */}
             <input type="file" style={{display: 'none'}} ref={imgRef} onChange={e=>setImg(e.target.files[0])} accept=".png,.jpg,.jpeg"/>
             <button className='text-2xl flex relative' onClick={handleImgClick}>
               <BiImageAdd className='text-3xl'/>
-              {/* <h3 className='absolute bg-zinc-200 text-black rounded-full text-xs p-2 bottom-4 left-5'>1</h3> */}
             </button>
             <button className='px-5 py-2 bg-zinc-800 rounded-lg' onClick={handleSend}>Send</button>
         </div>

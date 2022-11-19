@@ -22,7 +22,7 @@ function LeftChatContainer() {
         {/* <LeftSingleChat name={"Kyle Simpsons"}/>
         <LeftSingleChat name={"Jhonny Sins"}/>
         <LeftSingleChat name={"Salman Khan"}/> */}
-        { Object.entries(chats)?.sort((a,b)=>{return a[1].date-b[1].date}).map((chat)=> <LeftSingleChat key={chat[0]} value = {chat[1].userInfo} lastMessage={chat[1].lastMessage.text}/>)}
+        { Object.entries(chats)?.sort((a,b)=>{return b[1].date-a[1].date}).map((chat)=> <LeftSingleChat key={chat[0]} value = {chat[1].userInfo} lastMessage={chat[1].lastMessage ? chat[1].lastMessage.text : null}/>)}
     </div>
   )
 }

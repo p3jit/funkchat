@@ -1,4 +1,4 @@
-import React, { forwardRef, useContext, useRef } from 'react'
+import React, { useContext } from 'react'
 import { ChatContext } from '../../context/ChatContext'
 import RightChatContainer from './rightchatcontainer/RightChatContainer'
 import RightInputContainer from './rightinputcontainer/RightInputContainer'
