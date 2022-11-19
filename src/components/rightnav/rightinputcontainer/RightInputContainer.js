@@ -77,7 +77,7 @@ function RightInputContainer() {
     <div className='flex w-full justify-between mb-1 flex-col'>
         {img && 
           <div className='flex bg-zinc-800 py-2 pl-5 gap-2 items-center'>
-            <h1>Image attached!</h1>
+            <h1>{img.name}</h1>
             <button className='bg-zinc-500 p-2 rounded-full' onClick={handleDeleteImage}><BiTrash/></button>
           </div>
         }

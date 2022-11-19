@@ -10,7 +10,7 @@ function OutgoingChat({msg}) {
         <div className='flex flex-col gap-5'>
           <div className='p-4 bg-sky-800 w-fit rounded-lg self-end'>{msg.text}</div>
           <div className=' flex justify-center hover:cursor-pointer'>
-            {msg.img && <img src={ msg.img } loading="lazy" alt="chat-img" className='w-52 h-40 object-cover p-2 bg-sky-800'/>}
+            {msg.img && <img src={ msg.img } loading="lazy" alt="chat-img" className='max-w-[400px] max-h-[300px] object-cover p-2 bg-sky-800'/>}
           </div>
         </div>
         <img src={ currentUser.photoURL || `./icons/user.png`} loading="lazy" alt="chat-img" className='w-12 h-12 object-cover rounded-full'/>
