@@ -55,7 +55,7 @@ function LeftNavProfile() {
             <img className="w-24 h-24 self-center pt-1 rounded-full object-cover" loading='lazy' src={currentUser.photoURL || `./icons/user.png`} alt="funk-user"></img>
             <h2 className='self-center flex justify-center items-center gap-2'>
                 {currentUser.displayName}
-                <BiEdit className='text-md cursor-pointer' onClick={handleChangeName}/>
+                {/* <BiEdit className='text-md cursor-pointer' onClick={handleChangeName}/> */}
                 </h2>
             <button className='text-sm bg-zinc-700 rounded p-2 flex justify-center items-center gap-2' onClick={openImageChange}>
                 Change Image 

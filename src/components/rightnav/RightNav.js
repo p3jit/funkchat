@@ -7,9 +7,9 @@ import RightNavHeader from './rightnavheader/RightNavHeader'
 function RightNav() {
   const {data} = useContext(ChatContext);
   return (
-    <div className='basis-8/12 bg-zinc-500 flex flex-col justify-between'>
+    <div className='basis-8/12 h-auto bg-zinc-500 flex flex-col justify-between'>
       { data.user.uid && 
-      <div className='flex flex-col h-full justify-between'>
+      <div className='flex flex-col justify-between'>
         <RightNavHeader/>
         <RightChatContainer/>
         <RightInputContainer/>
