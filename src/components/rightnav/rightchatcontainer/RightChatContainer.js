@@ -24,12 +24,12 @@ function RightChatContainer() {
   useEffect(()=> {
     if(messageContainerRef) {
       const offsetBottom = messageContainerRef.current.offsetTop + messageContainerRef.current.offsetHeight;
-      messageContainerRef.current.scrollTo({ top: offsetBottom + 10000000000000 , behaviour: "smooth" });
+      messageContainerRef.current.scrollTo({ top: offsetBottom + 10000000000000 });
     }
   },[messages]);
   
   return (
-    <div className='p-5 overflow-y-auto flex flex-col gap-5 h-[650px] scrollbar-thumb-zinc-700 scrollbar-track-zinc-400 scrollbar-thin scroll' ref={messageContainerRef}>
+    <div className='p-5 overflow-y-auto flex flex-col gap-5 h-full scrollbar-thumb-zinc-700 scrollbar-track-zinc-400 scrollbar-thin scroll' ref={messageContainerRef}>
         { data.chatId && Object.entries(messages)?.map((currMsg) => {
           if(currMsg[1].senderId === currentUser.uid) {
             return <OutgoingChat msg={currMsg[1]} key={currMsg[0]}/>

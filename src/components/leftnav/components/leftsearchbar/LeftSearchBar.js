@@ -60,15 +60,15 @@ function LeftSearchBar() {
   }
   
   return (
-    <div className='py-3 px-5 flex flex-col gap-5'>
-        <input className='rounded-lg bg-zinc-200 text-zinc-500 pr-4 pl-3 w-full py-1 outline-none' 
+    <div className='py-3 px-5 flex flex-col gap-5 relative'>
+        <input className='rounded-lg bg-zinc-200 text-zinc-500 pr-4 pl-3 w-full py-1 outline-none relative' 
         placeholder='Search...' 
         onKeyDown={handleKeyDown} 
         onChange={e=>setSearchKey(e.target.value)}/>
         {foundUser.displayName ? 
-        <div className='flex items-center gap-3 hover:bg-zinc-700 p-3 cursor-pointer rounded-lg' onClick={handleSelect}>
-          <img src={foundUser.photoURL || `./icons/user.png`} alt="friends-img" className='w-14 h-14 object-cover items-center rounded-full'/>
-          <h1 className='text-lg'>{foundUser.displayName}</h1>
+        <div className='flex items-center gap-3 hover:bg-zinc-700 p-3 cursor-pointer rounded-lg top-[50px] w-full z-50 bg-zinc-500' onClick={handleSelect}>
+          <img src={foundUser.photoURL || `./icons/user.png`} alt="friends-img" className='w-12 h-12 object-cover items-center rounded-full'/>
+          <h1 className='text-md'>{foundUser.displayName}</h1>
         </div> : ""}
     </div>
   )

@@ -18,7 +18,7 @@ function LeftChatContainer() {
     }
   },[currentUser.uid]);
   return (
-    <div className='h-96 mx-5 mt-2 mb-6 gap-3 flex flex-col overflow-y-auto scrollbar-thumb-zinc-700 scrollbar-track-zinc-400 scrollbar-thin scroll'>
+    <div className=' mx-5 mt-2 mb-6 gap-3 flex flex-col overflow-y-auto scrollbar-thumb-zinc-700 scrollbar-track-zinc-400 scrollbar-thin scroll'>
         {/* <LeftSingleChat name={"Kyle Simpsons"}/>
         <LeftSingleChat name={"Jhonny Sins"}/>
         <LeftSingleChat name={"Salman Khan"}/> */}
