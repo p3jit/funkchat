@@ -45,11 +45,21 @@ function LeftNavProfile() {
         
     }   
 
+    const handleChangeName = async () => {
+        const newName = window.prompt("Enter new name:");
+        await updateProfile(currentUser, {displayName: newName});
+    }
+
     return (
         <div className='flex flex-col w-full py-2 px-4 gap-3'>
             <img className="w-24 h-24 self-center pt-1 rounded-full object-cover" loading='lazy' src={currentUser.photoURL || `./icons/user.png`} alt="funk-user"></img>
-            <h2 className='self-center'>{currentUser.displayName}</h2>
-            <button className='text-sm bg-zinc-700 rounded p-2 flex justify-center items-center gap-2' onClick={openImageChange}>Change Image <BiEdit className='text-md'/></button>
+            <h2 className='self-center flex justify-center items-center gap-2'>
+                {currentUser.displayName}
+                <BiEdit className='text-md cursor-pointer' onClick={handleChangeName}/>
+                </h2>
+            <button className='text-sm bg-zinc-700 rounded p-2 flex justify-center items-center gap-2' onClick={openImageChange}>
+                Change Image 
+            </button>
             <input type="file" style={{display: "none"}} ref={imgRef} accept=".jpg,.png,.jpeg" onChange={updateImage}/>
             <button className='text-sm bg-zinc-700 rounded p-2' onClick={handleClick}>Logout</button>
         </div>
