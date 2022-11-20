@@ -110,7 +110,7 @@ function RightInputContainer() {
           </div>
         }
         {video && 
-          <div className='flex bg-zinc-800 py-2 pl-5 gap-2 items-center w-full bottom-16'>
+          <div className='flex bg-zinc-800 py-2 pl-5 gap-2 items-center absolute w-full bottom-16'>
             <h1>{video.name}</h1>
             <button className='bg-zinc-500 p-2 rounded-full' onClick={handleDeleteVideo}><BiTrash/></button>
           </div>
