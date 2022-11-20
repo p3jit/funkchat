@@ -29,7 +29,7 @@ function RightChatContainer() {
   },[messages]);
   
   return (
-    <div className='p-5 overflow-y-auto flex flex-col gap-5 scrollbar-thumb-zinc-700 scrollbar-track-zinc-400 scrollbar-thin scroll max-h-[700px]' ref={messageContainerRef}>
+    <div className='p-5 overflow-y-auto flex flex-col gap-5 scrollbar-thumb-zinc-700 scrollbar-track-zinc-400 scrollbar-thin scroll max-h-[720px]' ref={messageContainerRef}>
         { data.chatId && Object.entries(messages)?.map((currMsg) => {
           if(currMsg[1].senderId === currentUser.uid) {
             return <OutgoingChat msg={currMsg[1]} key={currMsg[0]}/>
