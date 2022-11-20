@@ -4,7 +4,7 @@ import RightNav from '../components/rightnav/RightNav'
 
 function ChatPage() {
   return (
-    <div className='flex justify-center items-center w-screen p-10 '>
+    <div className='flex justify-center items-center w-screen p-10'>
         <div className='bg-zinc-700 text-white flex w-full max-w-4xl min-w-[800px] min-h-full'>
             <LeftNav/>
             <RightNav/>

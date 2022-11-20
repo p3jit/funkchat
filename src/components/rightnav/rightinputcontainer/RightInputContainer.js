@@ -102,15 +102,15 @@ function RightInputContainer() {
   }
 
   return (
-    <div className='flex w-full justify-between mb-1 flex-col'>
+    <div className='flex w-full justify-between mb-1 flex-col relative'>
         {img && 
-          <div className='flex bg-zinc-800 py-2 pl-5 gap-2 items-center'>
+          <div className='flex bg-zinc-800 py-2 pl-5 gap-2 items-center absolute w-full bottom-16'>
             <h1>{img.name}</h1>
             <button className='bg-zinc-500 p-2 rounded-full' onClick={handleDeleteImage}><BiTrash/></button>
           </div>
         }
         {video && 
-          <div className='flex bg-zinc-800 py-2 pl-5 gap-2 items-center'>
+          <div className='flex bg-zinc-800 py-2 pl-5 gap-2 items-center w-full bottom-16'>
             <h1>{video.name}</h1>
             <button className='bg-zinc-500 p-2 rounded-full' onClick={handleDeleteVideo}><BiTrash/></button>
           </div>
