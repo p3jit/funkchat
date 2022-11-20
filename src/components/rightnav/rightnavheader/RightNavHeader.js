@@ -5,7 +5,7 @@ import { ChatContext } from '../../../context/ChatContext';
 function RightNavHeader() {
   const {data} = useContext(ChatContext);
   return (
-    <div className='flex justify-between h-14 px-5 py-3 bg-zinc-600 items-center'>
+    <div className='flex justify-between h-14 px-5 py-[12.4px] bg-zinc-600 items-center'>
         <h1 className='text-lg '>{data.user.displayName || "TEST"}</h1>
         <div className='flex items-center gap-2'>
             <BsThreeDots className='text-2xl'/>
