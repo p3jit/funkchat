@@ -61,7 +61,7 @@ function LeftSearchBar() {
   
   return (
     <div className='py-3 px-5 flex flex-col gap-5 relative'>
-        <input className='rounded-lg bg-zinc-200 text-zinc-500 pr-4 pl-3 w-full py-1 outline-none relative' 
+        <input className=' bg-zinc-200 text-zinc-500 pr-4 pl-3 w-full py-1 outline-none relative' 
         placeholder='Search...' 
         onKeyDown={handleKeyDown} 
         onChange={e=>setSearchKey(e.target.value)}/>
