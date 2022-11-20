@@ -129,7 +129,6 @@ function RightInputContainer() {
               <button className='px-5 py-2 bg-zinc-800 rounded-lg' onClick={handleSend}>Send</button>
           </div>
         </div>
-
     </div>
   )
 }
