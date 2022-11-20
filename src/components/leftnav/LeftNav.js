@@ -6,7 +6,7 @@ import LeftSearchBar from './components/leftsearchbar/LeftSearchBar'
 
 function LeftNav() {
   return (
-    <div className='basis-4/12'>
+    <div className='basis-4/12 min-w-[300px]'>
         <div className='flex flex-col h-full'>
             <LeftNavHeader/>
             <div className='bg-zinc-600 h-full'>
