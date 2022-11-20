@@ -8,7 +8,7 @@ function OutgoingChat({msg}) {
     <div className='self-end'>
       <div className='flex gap-5'>
         <div className='flex flex-col gap-2'>
-          <div className='p-3 bg-sky-800 w-fit rounded-lg self-end'>{msg.text}</div>
+        {msg.text && <div className='p-3 bg-zinc-700 w-fit rounded-lg self-end'>{msg.text}</div>}
           <div className=' flex justify-center hover:cursor-pointer'>
             {msg.img && <img src={ msg.img } loading="lazy" alt="chat-img" className='max-w-[400px] max-h-[300px] object-cover p-2 bg-sky-800'/>}
           </div>

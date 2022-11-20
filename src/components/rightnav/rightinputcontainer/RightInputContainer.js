@@ -91,6 +91,7 @@ function RightInputContainer() {
 
     setText("");
     setImg(null);
+    setVideo(null);
   };
 
   const handleDeleteImage = () => {
